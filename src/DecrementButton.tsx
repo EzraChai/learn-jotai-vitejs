@@ -1,8 +1,8 @@
 import { decrementCountAtom } from "./atoms"
-import { atom } from 'jotai';
+import { useAtom } from 'jotai';
 
-const DecrementButton = () => {
-    const [,decrement]  = atom(decrementCountAtom)
+export const DecrementButton = () => {
+    const [,decrement]  = useAtom(decrementCountAtom)
     return (
         <div>
             <button onClick={decrement}>Decrement</button>

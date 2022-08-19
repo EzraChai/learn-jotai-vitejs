@@ -1,14 +1,17 @@
 import { useAtom } from "jotai"
-import { incrementCountAtom } from "./atoms";
+import { countAtom } from "./atoms";
+import {DecrementButton} from "./DecrementButton"
+import { IncrementButton } from './IncrementButton';
 
 function App() {
-  const [count, increment] = useAtom(incrementCountAtom);
+  const [count] = useAtom(countAtom);
 
   return (
-    <div className="App">
-      <div className="">Let's learn Jotai!</div>
-      {count}
-      <button onClick={increment}>Add</button>
+      <div className="App">
+        <div>Let's learn Jotai!</div>
+        {count}
+        <IncrementButton/>
+        <DecrementButton/>
     </div>
   )
 }
