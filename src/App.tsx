@@ -2,6 +2,7 @@ import { useAtom } from "jotai"
 import { countAtom } from "./atoms";
 import {DecrementButton} from "./DecrementButton"
 import { IncrementButton } from './IncrementButton';
+import { UppercaseInput } from "./UppercaseInput";
 
 function App() {
   const [count] = useAtom(countAtom);
@@ -12,6 +13,7 @@ function App() {
         {count}
         <IncrementButton/>
         <DecrementButton/>
+        <UppercaseInput/>
     </div>
   )
 }
